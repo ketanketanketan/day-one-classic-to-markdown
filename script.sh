@@ -52,8 +52,7 @@ date: $extracted_created_date
 $extracted_tags
 ---
 
-$extracted_entry_text
-  "
+$extracted_entry_text"
 
   echo "$markdown" > $file_output
 
