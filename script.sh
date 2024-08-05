@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+#
+# Convert Day One Classic plist entries into Markdown.
+# Github: https://github.com/ketanketanketan/day-one-classic-to-markdown
+# Author: Ketan Patel
+
 set -euo pipefail
 
 # Start
@@ -31,7 +36,7 @@ function generate_markdown() {
     has_tags=false
   fi
 
-  # HAX: Unfortunately like 43 blow is space sensative. I should use `printf` later.
+  # HAX: Unfortunately line 41 is space sensative. I should use `printf` later.
   if [[ "$has_tags" == true ]]; then
     file_tag_count=$(plutil -extract "Tags" raw $file)
     extracted_tags="tags:"
