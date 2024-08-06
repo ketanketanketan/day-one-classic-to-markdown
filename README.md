@@ -144,5 +144,5 @@ The following is what entries look like in their plist format. Content formatted
 ```
 
 ## Alternatives
-- [karyslav](https://github.com/karyslav) uses AppleScript in their [DayOneClassicMD-to-Separete-MarkDown-files](https://github.com/karyslav/DayOneClassicMD-to-Separete-MarkDown-files/tree/main) script.
+- [karyslav](https://github.com/karyslav) uses AppleScript in [DayOneClassicMD-to-Separete-MarkDown-files](https://github.com/karyslav/DayOneClassicMD-to-Separete-MarkDown-files/tree/main) to parse a single Markdown file by the "Date:" delimiter.
 - If you're using Day One 2, use [indyandie](https://github.com/Indyandie)'s [Last Day](https://github.com/Indyandie/last-day) script.
