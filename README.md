@@ -32,7 +32,7 @@ The primary goal of this script was to extract text content of a Day One Classic
 5. Run the script using `./script.sh`.
 6. Observe a new folder is created called exports where your entries were converted into Markdown.
 
-## Day One Classic Entries
+## Day One Classic Data File
 ![Day One Classic Sync Settings](README/day-one-classic-settings-sync.jpeg)
 
 Day One Classic stores entries as plist (Property List) files, an XML format popular on Apple software for quickly storing data without having to manage a database. Day One 2 moved to SQLite3. If you have other media in your journal, they will be stored in separate folders.
