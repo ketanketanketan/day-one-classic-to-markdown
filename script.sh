@@ -19,8 +19,8 @@ PATH_TO_EXPORT="export"
 if [[ ! $(find . -type d -name "$PATH_TO_EXPORT") ]]; then
   mkdir "$PATH_TO_EXPORT"
 else
-  rm -rf  "$PATH_TO_EXPORT"
-  mkdir  "$PATH_TO_EXPORT"
+  rm -rf "$PATH_TO_EXPORT"
+  mkdir "$PATH_TO_EXPORT"
 fi
 
 #######################################
@@ -60,7 +60,7 @@ function generate_markdown() {
   local entry_md5=$(md5 -q $entry)
   output_file_name=$(echo $extracted_created_date | sed 's/:/-/g')
   output_file="$PATH_TO_EXPORT/$output_file_name-$entry_md5.md"
-  
+
   local markdown="---
 date: $extracted_created_date
 $extracted_tags
