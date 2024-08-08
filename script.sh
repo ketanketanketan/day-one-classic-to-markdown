@@ -44,15 +44,15 @@ function generate_markdown() {
     has_tags=true
   fi
 
-  # HAX: Unfortunately line 41 is space sensative. I should use `printf` later.
-  local extracted_tags=""
+  # HAX: Is there a better way to include newlines when appending a string with a value?
+  local extracted_tags="tags:"
   if [[ "$has_tags" == true ]]; then
     local entry_tag_count=$(plutil -extract "Tags" raw $entry)
-    extracted_tags="tags:"
     if [[ $entry_tag_count > 0 ]]; then
       for ((tag_index = 0; tag_index < entry_tag_count; tag_index++)); do
+        local extracted_tag=$(plutil -extract "Tags".$tag_index raw $entry | tr ' ' '-')
         extracted_tags="$extracted_tags
-  - $(plutil -extract "Tags".$tag_index raw $entry)"
+  - $extracted_tag"
       done
     fi
   fi
